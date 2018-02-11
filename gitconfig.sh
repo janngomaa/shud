@@ -3,14 +3,14 @@
 
 cd work
 
-echo "*****  Initializing git on $PWD/shud  *****" 
-git init shud
+#echo "*****  Initializing git on $PWD/shud  *****" 
+#git init shud
 
 cd shud
 echo "*****  Adding all element in $PWD to git repo  *****" 
 git add *
 
-git commit -m "Shud Initial commit"
+git commit -m "$1"
 
 #git remote add origin https://github.com/janngomaa/shud.git
 
