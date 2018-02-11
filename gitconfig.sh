@@ -12,8 +12,8 @@ git add *
 
 git commit -m "Shud Initial commit"
 
-git remote add origin https://github.com/janngomaa/shud.git
+#git remote add origin https://github.com/janngomaa/shud.git
 
-git pull remote master
+#git pull remote master
 
 git push origin master
