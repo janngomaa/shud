@@ -21,7 +21,7 @@ cd work/shud
 
 git add *
 
-git commit -m "$1"
+git commit -am "$1"
 
 git pull origin master
 
