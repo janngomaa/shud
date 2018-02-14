@@ -19,10 +19,10 @@ echo "*****  Adding all element in $PWD to git repo  *****"
 
 cd work/shud
 
+git pull origin master
+
 git add *
 
 git commit -am "$1"
-
-git pull origin master
 
 git push origin master
