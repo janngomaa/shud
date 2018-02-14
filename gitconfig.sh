@@ -23,6 +23,6 @@ git add *
 
 git commit -m "$1"
 
-git pull
+git pull remote master
 
 git push origin master
