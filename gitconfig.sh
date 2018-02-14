@@ -1,5 +1,6 @@
 # Option 1: Initializing ==> Uncomment untill line before Option 2
 #https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu-14.04/
+#https://git-scm.com/book/fr/v1/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants
 #  Run in Docker container
 #  docker exec -i -t sparkc sh work/shud/gitconfig.sh
 
@@ -21,5 +22,7 @@ cd work/shud
 git add *
 
 git commit -m "$1"
+
+git pull
 
 git push origin master
