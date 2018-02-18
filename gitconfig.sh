@@ -3,6 +3,10 @@
 #  https://git-scm.com/book/fr/v1/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants
 #  Command to run in Docker container: docker exec -i -t sparkc sh work/shud/gitconfig.sh
 
+#Configure git to link your profile
+#git config --global user.name "user_name"
+#git config --global user.email "email_id"
+
 #  Initializing git on a local repo (for the first time)
 #cd work
 #echo "*****  Initializing git on $PWD/shud  *****" 
