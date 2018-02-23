@@ -7,32 +7,17 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import re
 import hashlib
-#from sets import Set
 import inspect
 from scrapy.http import HtmlResponse
-#from selenium import webdriver
 import time
-#from datetime import datetime, timedelta
-#import socket
-#from selenium import webdriver
 from bs4 import BeautifulSoup
-#import sys
 import requests
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
-#from couchbase.bucket import Bucket
-#from couchbase.cluster import Cluster, PasswordAuthenticator
-#from couchbase.n1ql import N1QLQuery
 import time
-
-#import couchbase._libcouchbase as LCB
-#import couchbase.exceptions as E
-#from couchbase.user_constants import FMT_JSON
-#from couchbase._pyport import ulp
 from cryptography.fernet import Fernet
 import random
 import uuid
-#import validators
 from scrapy.conf import settings
 from scrapy.crawler import CrawlerProcess
 from scrapy.xlib.pydispatch import dispatcher
@@ -42,7 +27,6 @@ from scrapy import signals, log
 from twisted.internet import reactor
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
-#from scrapy.utils.project import get_project_settings
 import pandas as pd
 
 class ShudScraperItem(scrapy.Item):
@@ -75,7 +59,8 @@ def MyCrawler(self) :
     })
     #urlListe=[]
     Parame=Parameters()
-    urlListe = spark.read.csv("URLListe.csv")    
+    #urlListe = spark.read.csv("URLListe.csv")  
+    urlListe = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false'")
     for url in urlListe.rdd.collect():
         if 'amazon' in url[0]:
             print("JAUNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
@@ -83,12 +68,20 @@ def MyCrawler(self) :
             print("FINNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
             Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
             process.crawl(AmazonSpider)  
-            df = spark.read.csv("URLListe.csv")
+            #df = spark.read.csv("URLListe.csv")
+            df = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false'")
             urlListe.union(df)
             urlListe = urlListe.dropDuplicates()
 
 
-class AmazonSpider(scrapy.Spider):
+class ShudCrawler(scrapy.Spider):
+    
+    def ___init__(self):
+        self.spkSession = SparkSession \
+        .builder \
+        .appName("ShudCrawler") \
+        .config("spark.some.config.option", "some-value") \
+        .getOrCreate()
     
     parametre=Parameters()
     #  create the context spark
@@ -126,14 +119,10 @@ class AmazonSpider(scrapy.Spider):
         # The list of items that are found on the particular page
         items = []
             #spark configuration spark session
-        spark = SparkSession \
-        .builder \
-        .appName("Python Spark SQL basic example") \
-        .config("spark.some.config.option", "some-value") \
-        .getOrCreate()
+        
         
         initList = [("", "")]
-        df = spark.createDataFrame(initList, schema=["url", "parsed"])
+        newUrls = spark.createDataFrame(initList, schema=["url", "parsed"])
         # Only extract canonicalized and unique links (with respect to the current page)
         links = LinkExtractor(canonicalize=False, unique=True).extract_links(response)
         # Now go through all the found links
@@ -149,15 +138,18 @@ class AmazonSpider(scrapy.Spider):
                 item['url_from'] = response.url
                 item['url_to'] = link.url
                 items.append(item)
-                self.URLListe.append(response.url)
-                self.URLListe.append(link.url)                
-                df = df.union(spark.createDataFrame([(link.url, "false")]))
+                #self.URLListe.append(response.url)
+                self.URLListe.append(link.url)  
+                
+        newUrls = newUrls.union(spark.createDataFrame([(self.URLListe, "false")])
+                                       ).union(spark.createDataFrame([(response.url, "true")]))
                 
       #  print("*****************DEBUT*********************************************" )
       #   print(URLListe) 
         
-        df = df.dropDuplicates()
-        df.write.csv('URLListe.csv', mode="overwrite")
+        
+        newUrls = newUrls.dropDuplicates()
+        
         
         #MyCrawler
         
@@ -170,7 +162,19 @@ class AmazonSpider(scrapy.Spider):
             f.write(response.body)
         self.log('Saved file %s' % filename)
         
+        '''
+        
         print('XXXXXXXXXXXXXXX DEBUT XXXXXXXXXXXXXXXXXXXXXX')
         MyCrawler(self)
         print('XXXXXXXXXXXXXXX FIN XXXXXXXXXXXXXXXXXXXXXX')
+        '''
+        # TODO
+        # Enregistrer les nouvelles urls dans la table sans écraser son contenu
+        #df.write.csv('URLListe.csv', mode="overwrite")
+        urlListe = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false' and url <> '%s'" %response.url)
+        
+        df = urlListe.union(newUrls)
+        
+        sqlContext.registerDataFrameAsTable(df, "UrlList")
+        
         return items        
