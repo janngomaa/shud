@@ -1,5 +1,8 @@
 import scrapy
 import pyspark
+from pyspark.conf import SparkConf
+from pyspark.sql import SparkSession
+from pyspark.sql import SQLContext
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import re
@@ -30,9 +33,6 @@ from cryptography.fernet import Fernet
 import random
 import uuid
 #import validators
-
-import pyspark
-#from scrapy import project, signals
 from scrapy.conf import settings
 from scrapy.crawler import CrawlerProcess
 from scrapy.xlib.pydispatch import dispatcher
@@ -42,10 +42,8 @@ from scrapy import signals, log
 from twisted.internet import reactor
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
-from scrapy.crawler import CrawlerProcess
 #from scrapy.utils.project import get_project_settings
-
-
+import pandas as pd
 
 class ShudScraperItem(scrapy.Item):
     # The source URL
@@ -64,26 +62,39 @@ def Parameters(spidername = "amazon", allowed_domain= "amazon.com", start_url="h
     return para
 
     
-def MyCrawler(self,URLListe) :
+def MyCrawler(self) :
+    
+    spark = SparkSession \
+    .builder \
+    .appName("Python Spark SQL basic example") \
+    .config("spark.some.config.option", "some-value") \
+    .getOrCreate()
+    
     process = CrawlerProcess({
-     #'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
      'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'   
     })
-    urlListe=[]
-    print("AAAAAA")
+    #urlListe=[]
     Parame=Parameters()
-    urlListe.append(Parame[2])
-    #pyspark.parallelize(List(urlListe)).collect()
-    for url in urlListe:
-        Parameters('Amazon', 'Amazon.com', url) #Parame=
-        process.crawl(AmazonSpider)
-#union of the two list
-        urlListe.append(URLListe[1])
+    urlListe = spark.read.csv("URLListe.csv")    
+    for url in urlListe.rdd.collect():
+        if 'amazon' in url[0]:
+            print("JAUNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
+            print(url[0])
+            print("FINNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
+            Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
+            process.crawl(AmazonSpider)  
+            df = spark.read.csv("URLListe.csv")
+            urlListe.union(df)
+            urlListe = urlListe.dropDuplicates()
+
 
 class AmazonSpider(scrapy.Spider):
     
     parametre=Parameters()
-    
+    #  create the context spark
+    #conf = SparkConf()
+    #sc = pyspark.SparkContext(conf=conf)  
+
      # Spider Name 
     name =parametre[0]
     
@@ -112,15 +123,21 @@ class AmazonSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        print("#############################  Parsing %s" %response.url)
         # The list of items that are found on the particular page
         items = []
+            #spark configuration spark session
+        spark = SparkSession \
+        .builder \
+        .appName("Python Spark SQL basic example") \
+        .config("spark.some.config.option", "some-value") \
+        .getOrCreate()
         
+        initList = [("", "")]
+        df = spark.createDataFrame(initList, schema=["url", "parsed"])
         # Only extract canonicalized and unique links (with respect to the current page)
         links = LinkExtractor(canonicalize=False, unique=True).extract_links(response)
         # Now go through all the found links
-        for link in links:
-            
+        for link in links:            
             # Check whether the domain of the URL of the link is allowed; so whether it is in one of the allowed domains
             is_allowed = False
             for allowed_domain in self.allowed_domains:
@@ -133,41 +150,27 @@ class AmazonSpider(scrapy.Spider):
                 item['url_to'] = link.url
                 items.append(item)
                 self.URLListe.append(response.url)
-                self.URLListe.append(link.url)
-                next_page = link.url
-
-            if next_page is not None:
-                next_page = response.urljoin(next_page)
-                yield scrapy.Request(next_page, callback=self.parse)
-             
+                self.URLListe.append(link.url)                
+                df = df.union(spark.createDataFrame([(link.url, "false")]))
+                
       #  print("*****************DEBUT*********************************************" )
-      #   print(URLListe)        
+      #   print(URLListe) 
+        
+        df = df.dropDuplicates()
+        df.write.csv('URLListe.csv', mode="overwrite")
+        
+        #MyCrawler
+        
       #  print("*******************FIN*******************************************" )
         # Return all the found items    
         page = response.url.split("/")[-2]
-        urlHash=hashlib.md5(bytes(str(response.url),"ascii"))   # python 3                
-        filename = str(self.name)+'_'+ urlHash.hexdigest() + '-%s.html' % page
+        m=hashlib.md5(bytes(str(response.url),"ascii"))   # python 3                
+        filename = str(self.name)+'_'+ m.hexdigest() + '-%s.html' % page
         with open(filename, 'wb') as f:
             f.write(response.body)
         self.log('Saved file %s' % filename)
         
+        print('XXXXXXXXXXXXXXX DEBUT XXXXXXXXXXXXXXXXXXXXXX')
+        MyCrawler(self)
+        print('XXXXXXXXXXXXXXX FIN XXXXXXXXXXXXXXXXXXXXXX')
         return items        
-    
-#Function to update the list of urls to crawl
-def Updatedlist(Listes1=None, Listes2=None):
-    mergeliste = Set(Listes1) | Set(Listes2)
-    return mergeliste
-
-if __name__ == '__main__':
-    liste=AmazonSpider.parse
-    MyCrawler(liste)
-    
-
-
-#process = CrawlerProcess(get_project_settings())
-#process.crawl(AmazonSpider)
-#, name = str("amazon"), allowed_domains= str("amazon.com"), start_urls=str("https://www.amazon.com/gp/goldbox")
-#process.start()
-
-        
-        
