@@ -112,6 +112,7 @@ class AmazonSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
+        print("#############################  Parsing %s" %response.url)
         # The list of items that are found on the particular page
         items = []
         
@@ -133,9 +134,8 @@ class AmazonSpider(scrapy.Spider):
                 items.append(item)
                 self.URLListe.append(response.url)
                 self.URLListe.append(link.url)
-                
                 next_page = link.url
-            print('XXXXXXXXXXXXXXX ' +next_page)
+
             if next_page is not None:
                 next_page = response.urljoin(next_page)
                 yield scrapy.Request(next_page, callback=self.parse)
@@ -145,15 +145,12 @@ class AmazonSpider(scrapy.Spider):
       #  print("*******************FIN*******************************************" )
         # Return all the found items    
         page = response.url.split("/")[-2]
-        m=hashlib.md5(bytes(str(response.url),"ascii"))   # python 3                
-        filename = str(self.name)+'_'+ m.hexdigest() + '-%s.html' % page
+        urlHash=hashlib.md5(bytes(str(response.url),"ascii"))   # python 3                
+        filename = str(self.name)+'_'+ urlHash.hexdigest() + '-%s.html' % page
         with open(filename, 'wb') as f:
             f.write(response.body)
         self.log('Saved file %s' % filename)
         
-        print('XXXXXXXXXXXXXXX DEBUT XXXXXXXXXXXXXXXXXXXXXX')
-        #MyCrawler(self)
-        print('XXXXXXXXXXXXXXX FIN XXXXXXXXXXXXXXXXXXXXXX')
         return items        
     
 #Function to update the list of urls to crawl
