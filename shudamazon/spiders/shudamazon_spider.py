@@ -48,40 +48,45 @@ def Parameters(spidername = "amazon", allowed_domain= "amazon.com", start_url="h
     
 def MyCrawler(self) :
     
-    spark = SparkSession \
-    .builder \
-    .appName("Python Spark SQL basic example") \
-    .config("spark.some.config.option", "some-value") \
-    .getOrCreate()
+    sparkSession = SparkSession \
+        .builder \
+        .appName("ShudSparkSession") \
+        .config("spark.some.config.option", "some-value") \
+        .getOrCreate()
+        
+    sqlContext = SQLContext(sparkSession) 
     
     process = CrawlerProcess({
      'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'   
     })
     #urlListe=[]
     Parame=Parameters()
-    #urlListe = spark.read.csv("URLListe.csv")  
-    urlListe = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false'")
-    for url in urlListe.rdd.collect():
-        if 'amazon' in url[0]:
-            print("JAUNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
-            print(url[0])
-            print("FINNNNNNNNNNNNNNNNNNNNNNNNNNNNNN")
+    #Initializing tmp table 
+    initUrlList = [(Parame[2], "false")]
+    df = self.sparkSession.createDataFrame(initUrlList, schema=["url", "parsed"])
+    sqlContext.registerDataFrameAsTable(df, "WorkTable")
+    
+    urlListe = sqlContext.sql("SELECT url, parsed from WorkTable where parsed = 'false'")
+    while len(urlListe.rdd.collect()) > 0:
+        for url in urlListe.rdd.collect():
+            if 'amazon' in url[0]:
             Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
-            process.crawl(AmazonSpider)  
-            #df = spark.read.csv("URLListe.csv")
-            df = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false'")
-            urlListe.union(df)
-            urlListe = urlListe.dropDuplicates()
+            process.crawl(ShudCrawler)  
+        
+        urlListe = sqlContext.sql("SELECT url, parsed from WorkTable where parsed = 'false'")
+
 
 
 class ShudCrawler(scrapy.Spider):
     
     def ___init__(self):
         self.spkSession = SparkSession \
-        .builder \
-        .appName("ShudCrawler") \
-        .config("spark.some.config.option", "some-value") \
-        .getOrCreate()
+            .builder \
+            .appName("ShudCrawler") \
+            .config("spark.some.config.option", "some-value") \
+            .getOrCreate()
+            
+        self.sqlContext = SQLContext(self.sparkSession)
     
     parametre=Parameters()
     #  create the context spark
@@ -95,7 +100,7 @@ class ShudCrawler(scrapy.Spider):
     allowed_domains = parametre[1]
     URLListe=[]
     # The URLs to start with
-    start_urls =parametre[2]
+    start_urls = parametre[2]
     #initialise list of url to crawl
     CrawList=parametre[2]
     
@@ -116,13 +121,9 @@ class ShudCrawler(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        # The list of items that are found on the particular page
-        items = []
-            #spark configuration spark session
-        
-        
-        initList = [("", "")]
-        newUrls = spark.createDataFrame(initList, schema=["url", "parsed"])
+
+        newUrls = []
+
         # Only extract canonicalized and unique links (with respect to the current page)
         links = LinkExtractor(canonicalize=False, unique=True).extract_links(response)
         # Now go through all the found links
@@ -132,23 +133,20 @@ class ShudCrawler(scrapy.Spider):
             for allowed_domain in self.allowed_domains:
                 if allowed_domain in link.url:
                     is_allowed = True
-            # If it is allowed, create a new item and add it to the list of found items
+            # If it is allowed, append the url to the list
             if is_allowed:
-                item = ShudScraperItem()
-                item['url_from'] = response.url
-                item['url_to'] = link.url
-                items.append(item)
-                #self.URLListe.append(response.url)
-                self.URLListe.append(link.url)  
+                newUrls.append((link.url, "false")  
                 
-        newUrls = newUrls.union(spark.createDataFrame([(self.URLListe, "false")])
-                                       ).union(spark.createDataFrame([(response.url, "true")]))
-                
-      #  print("*****************DEBUT*********************************************" )
-      #   print(URLListe) 
+        #Get all urls to synchronize and update
+        df = self.sqlContext\
+            .sql("SELECT url, parsed from WorkTable where url <>'%s'" % response.url)\
+            .union(self.sparkSession.createDataFrame(newUrls))\
+            .union(self.sparkSession.createDataFrame([(response.url, "true")]))\
+            .dropDuplicates(['url'])
         
+        self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
         
-        newUrls = newUrls.dropDuplicates()
+        df.show()
         
         
         #MyCrawler
@@ -160,21 +158,4 @@ class ShudCrawler(scrapy.Spider):
         filename = str(self.name)+'_'+ m.hexdigest() + '-%s.html' % page
         with open(filename, 'wb') as f:
             f.write(response.body)
-        self.log('Saved file %s' % filename)
-        
-        '''
-        
-        print('XXXXXXXXXXXXXXX DEBUT XXXXXXXXXXXXXXXXXXXXXX')
-        MyCrawler(self)
-        print('XXXXXXXXXXXXXXX FIN XXXXXXXXXXXXXXXXXXXXXX')
-        '''
-        # TODO
-        # Enregistrer les nouvelles urls dans la table sans écraser son contenu
-        #df.write.csv('URLListe.csv', mode="overwrite")
-        urlListe = sqlContext.sql("SELECT url, parsed from UrlList where parsed = 'false' and url <> '%s'" %response.url)
-        
-        df = urlListe.union(newUrls)
-        
-        sqlContext.registerDataFrameAsTable(df, "UrlList")
-        
-        return items        
+        self.log('Saved file %s' % filename)   
