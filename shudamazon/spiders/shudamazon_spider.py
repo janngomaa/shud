@@ -70,8 +70,8 @@ def MyCrawler(self) :
     while len(urlListe.rdd.collect()) > 0:
         for url in urlListe.rdd.collect():
             if 'amazon' in url[0]:
-            Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
-            process.crawl(ShudCrawler)  
+                #Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
+                process.crawl(ShudCrawler)  
         
         urlListe = sqlContext.sql("SELECT url, parsed from WorkTable where parsed = 'false'")
 
@@ -135,14 +135,13 @@ class ShudCrawler(scrapy.Spider):
                     is_allowed = True
             # If it is allowed, append the url to the list
             if is_allowed:
-                newUrls.append((link.url, "false")  
-                
-        #Get all urls to synchronize and update
-        df = self.sqlContext\
-            .sql("SELECT url, parsed from WorkTable where url <>'%s'" % response.url)\
-            .union(self.sparkSession.createDataFrame(newUrls))\
-            .union(self.sparkSession.createDataFrame([(response.url, "true")]))\
-            .dropDuplicates(['url'])
+                newUrls.append((link.url, "false")) 
+            #Get all urls to synchronize and update
+            df = self.sqlContext\
+                .sql("SELECT url, parsed from WorkTable where url <>'%s'" % response.url)\
+                .union(self.sparkSession.createDataFrame(newUrls))\
+                .union(self.sparkSession.createDataFrame([(response.url, "true")]))\
+                .dropDuplicates(['url'])
         
         self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
         
