@@ -1,4 +1,5 @@
 import scrapy
+import configparser
 import pyspark
 from pyspark.conf import SparkConf
 from pyspark.sql import SparkSession
@@ -29,80 +30,26 @@ from scrapy.crawler import Crawler
 from scrapy.settings import Settings
 import pandas as pd
 
-class ShudScraperItem(scrapy.Item):
-    # The source URL
-    url_from = scrapy.Field()
-    # The destination URL
-    url_to = scrapy.Field()
-    
-def Parameters(spidername = "amazon", allowed_domain= "amazon.com", start_url="https://www.amazon.com/gp/goldbox"):
-      # Spider Name  
-    name =spidername   
-     # The domains that are allowed (links to other domains are skipped)
-    allowed_domains = allowed_domain
-     # The URLs to start with
-    start_urls = start_url
-    para=[name, allowed_domains, start_urls]
-    return para
-
-    
-def MyCrawler(self) :
+class ShudCrawler(scrapy.Spider):
+    name = "amazon"
+    config = configparser.ConfigParser()
+    config.read('../shud.ini')
     
     sparkSession = SparkSession \
-        .builder \
-        .appName("ShudSparkSession") \
-        .config("spark.some.config.option", "some-value") \
-        .getOrCreate()
-        
-    sqlContext = SQLContext(sparkSession) 
-    
-    process = CrawlerProcess({
-     'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'   
-    })
-    #urlListe=[]
-    Parame=Parameters()
-    #Initializing tmp table 
-    initUrlList = [(Parame[2], "false")]
-    df = self.sparkSession.createDataFrame(initUrlList, schema=["url", "parsed"])
-    sqlContext.registerDataFrameAsTable(df, "WorkTable")
-    
-    urlListe = sqlContext.sql("SELECT url, parsed from WorkTable where parsed = 'false'")
-    while len(urlListe.rdd.collect()) > 0:
-        for url in urlListe.rdd.collect():
-            if 'amazon' in url[0]:
-                #Parameters('Amazon', 'Amazon.com', url[0]) #Parame=
-                process.crawl(ShudCrawler)  
-        
-        urlListe = sqlContext.sql("SELECT url, parsed from WorkTable where parsed = 'false'")
-
-
-
-class ShudCrawler(scrapy.Spider):
-    
-    def ___init__(self):
-        self.spkSession = SparkSession \
             .builder \
-            .appName("ShudCrawler") \
+            .appName(config.get('spark', 'appname')) \
             .config("spark.some.config.option", "some-value") \
             .getOrCreate()
             
-        self.sqlContext = SQLContext(self.sparkSession)
-    
-    parametre=Parameters()
-    #  create the context spark
-    #conf = SparkConf()
-    #sc = pyspark.SparkContext(conf=conf)  
+    sqlContext = SQLContext(sparkSession)
 
      # Spider Name 
-    name =parametre[0]
+        #self.config.get('crawling', 'spidername')
     
     # The domains that are allowed (links to other domains are skipped)
-    allowed_domains = parametre[1]
-    URLListe=[]
+    allowed_domains = config.get('crawling', 'allowedDomain')
     # The URLs to start with
-    start_urls = parametre[2]
-    #initialise list of url to crawl
-    CrawList=parametre[2]
+    start_urls = config.get('crawling', 'startUrl')
     
     # This spider has one rule: extract all (unique and canonicalized) links, follow them and parse them using the parse_items method
     rules = [
@@ -116,11 +63,43 @@ class ShudCrawler(scrapy.Spider):
     ]    
         
     def start_requests(self):
+        print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+        #TODO
+        #Parcourir la liste de start urls à crawler et la mettre en mémore avec parsed=false
+        initUrlList = [(self.config.get('crawling', 'startUrl'), "false")]
+        df = self.sparkSession.createDataFrame(initUrlList, schema=["url", "crawled"])
+        self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
+        
+        
         urls = [self.start_urls]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
+        
+        indx = 0
+        urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
+        while len(urlListe.rdd.collect()) > 0:
+            print("####################### Current step = %s " %str(indx))
+            
+            for url in urlListe.rdd.collect():
+                print("************************** Current url = %s " %str(url))
+                #TODO
+                #Vérifier que l'url contient au moins un des allowed domain
+                if self.config.get('crawling', 'allowedDomain') in url[0]:
+                    print("&&&&&&&&&&&&&&&&&&&&&& Allowed url = %s " %str(url[0]))
+                    yield scrapy.Request(url=url[0], callback=self.parse)
+
+            urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
+            if indx > 2:
+                break
+                
+            indx += 1
+            
+            
 
     def parse(self, response):
+        
+        print("%%%%%%% Current url = %s " %response.url)
+        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
         newUrls = []
 
@@ -138,23 +117,22 @@ class ShudCrawler(scrapy.Spider):
                 newUrls.append((link.url, "false")) 
             #Get all urls to synchronize and update
             df = self.sqlContext\
-                .sql("SELECT url, parsed from WorkTable where url <>'%s'" % response.url)\
+                .sql("SELECT url, crawled from WorkTable where url <>'%s'" % response.url)\
                 .union(self.sparkSession.createDataFrame(newUrls))\
                 .union(self.sparkSession.createDataFrame([(response.url, "true")]))\
                 .dropDuplicates(['url'])
         
         self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
+        print(df.show())
         
-        df.show()
-        
-        
-        #MyCrawler
-        
-      #  print("*******************FIN*******************************************" )
-        # Return all the found items    
-        page = response.url.split("/")[-2]
+        # TODO
+        #Put response body's content into RDDs
+        #page = response.url.split("/")[-2]
+        #page = response.url
         m=hashlib.md5(bytes(str(response.url),"ascii"))   # python 3                
-        filename = str(self.name)+'_'+ m.hexdigest() + '-%s.html' % page
+        filename = str(self.name)+'_'+ m.hexdigest() + '.html'
         with open(filename, 'wb') as f:
             f.write(response.body)
-        self.log('Saved file %s' % filename)   
+        self.log('Saved file %s' % filename) 
+        
+        return df
