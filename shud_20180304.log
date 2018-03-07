@@ -1,0 +1,2874 @@
+2018-03-04 20:00:03 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: shudamazon)
+2018-03-04 20:00:03 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.3 | packaged by conda-forge | (default, Oct  5 2017, 14:07:33) - [GCC 4.8.2 20140120 (Red Hat 4.8.2-15)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Linux-4.4.0-116-generic-x86_64-with-debian-stretch-sid
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o0
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o6
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o7
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o8
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o9
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o10
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o11
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o13
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o16
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o17
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o18
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o19
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o22
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o25
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o26
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o27
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o28
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o31
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o32
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o33
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o34
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:03 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'shudamazon', 'CLOSESPIDER_PAGECOUNT': '1', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'CONCURRENT_REQUESTS_PER_IP': 1, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 10, 'FEED_FORMAT': 'jl', 'FEED_URI': 'shuddata.jl', 'LOG_FILE': 'shud_20180304.log', 'NEWSPIDER_MODULE': 'shudamazon.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['shudamazon.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+2018-03-04 20:00:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-04 20:00:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-04 20:00:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-04 20:00:03 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-03-04 20:00:03 [scrapy.core.engine] INFO: Spider opened
+2018-03-04 20:00:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-04 20:00:03 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+sc
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yro37
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: c
+o37
+defaultParallelism
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !yi2
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+e
+
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:03 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+ro12
+s/tmp/spark-6f6924a0-4715-4e8c-8528-38178eb28003/pyspark-4aa58f8a-746a-4cf7-a6dd-0da2cf8c9a62/tmp3ef6q226
+i2
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro38
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+id
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yi0
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+toJavaArray
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+pythonToJava
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonFunction
+rj
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonFunction
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.HashMap
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yao39
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o39
+put
+sPYTHONHASHSEED
+s0
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yn
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ylo40
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ylo41
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonFunction
+jgAIoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2ZpbGxfZnVuY3Rpb24KcQAoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX21ha2Vfc2tlbF9mdW5jCnEBY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2J1aWx0aW5fdHlwZQpxAlgIAAAAQ29kZVR5cGVxA4VxBFJxBShLAksASwJLA0sTY19jb2RlY3MKZW5jb2RlCnEGWAwAAAB0AMKIAHwBwoMCUwBxB1gGAAAAbGF0aW4xcQiGcQlScQpOhXELWAMAAABtYXBxDIVxDVgBAAAAX3EOWAgAAABpdGVyYXRvcnEPhnEQWCYAAAAvdXNyL2xvY2FsL3NwYXJrL3B5dGhvbi9weXNwYXJrL3JkZC5weXERWAQAAABmdW5jcRJNPQFoBlgCAAAAAAFxE2gIhnEUUnEVWAEAAABmcRaFcRcpdHEYUnEZXXEaaAAoaAFoBShLAUsASwFLAUtTaAZYBAAAAHwAUwBxG2gIhnEcUnEdToVxHilYAQAAAHhxH4VxIGgRWAgAAAA8bGFtYmRhPnEhTUwCY19fYnVpbHRpbl9fCmJ5dGVzCnEiKVJxIykpdHEkUnElXXEmfXEnh3EoUnEpfXEqTn1xK1gLAAAAcHlzcGFyay5yZGRxLHRSYWgnh3EtUnEufXEvTn1xMGgsdFJOY3B5c3Bhcmsuc2VyaWFsaXplcnMKQmF0Y2hlZFNlcmlhbGl6ZXIKcTEpgXEyfXEzKFgKAAAAc2VyaWFsaXplcnE0Y3B5c3Bhcmsuc2VyaWFsaXplcnMKUGlja2xlU2VyaWFsaXplcgpxNSmBcTZ9cTdYEwAAAF9vbmx5X3dyaXRlX3N0cmluZ3NxOIlzYlgJAAAAYmF0Y2hTaXplcTlLAXViY3B5c3Bhcmsuc2VyaWFsaXplcnMKQXV0b0JhdGNoZWRTZXJpYWxpemVyCnE6KYFxO31xPChoNGg1KYFxPX1xPmg4iXNiaDlLAFgIAAAAYmVzdFNpemVxP0oAAAEAdWJ0cUAu
+ro39
+ro40
+spython
+s3.6
+ro41
+ro15
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro42
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o39
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o40
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o41
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+rdd
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro43
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonRDD
+ro43
+ro42
+bTrue
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro44
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o44
+asJavaRDD
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro45
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o37
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o43
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+pythonToJava
+ro45
+bTrue
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro46
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+toJavaArray
+ro46
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro47
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o47
+rdd
+e
+
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Answer received: !yro48
+2018-03-04 20:00:04 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+applySchemaToPythonRDD
+ro48
+s{"fields":[{"metadata":{},"name":"url","nullable":true,"type":"string"},{"metadata":{},"name":"crawled","nullable":true,"type":"string"}],"type":"struct"}
+e
+
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Answer received: !yro49
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Command to send: c
+o49
+createOrReplaceTempView
+sWorkTable
+e
+
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Answer received: !yro50
+2018-03-04 20:00:07 [py4j.java_gateway] DEBUG: Command to send: c
+o50
+javaToPython
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !yro51
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+id
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !yi8
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Answer received: !yro52
+2018-03-04 20:00:09 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro52
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yi39247
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yro53
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro53
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yi39269
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o46
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o47
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o48
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o52
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o53
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yro54
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o54
+javaToPython
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yro55
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+id
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yi12
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yro56
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro56
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yi41972
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Answer received: !yro57
+2018-03-04 20:00:11 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro57
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi35772
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.amazon.com/gp/goldbox> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro58
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o58
+javaToPython
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro59
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+id
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi16
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro60
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro60
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi46196
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro61
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro61
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi42593
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro62
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o62
+javaToPython
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro63
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+id
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi20
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro64
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro64
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi38938
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro65
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro65
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yi40308
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o54
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o55
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o56
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o57
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o58
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o59
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o60
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o61
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o64
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o65
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yro66
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o66
+e
+
+2018-03-04 20:00:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/robots.txt> (referer: None)
+2018-03-04 20:00:12 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2018-03-04 20:00:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/gp/goldbox> (referer: None)
+2018-03-04 20:00:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.com/gp/goldbox> (referer: None)
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py", line 101, in parse
+    print("%%%%%%% Current url = %s " %response.url)
+ValueError: unsupported format character 'C' (0x43) at index 8
+2018-03-04 20:00:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 618,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 118035,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'dupefilter/filtered': 3,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2018, 3, 4, 20, 0, 14, 40434),
+ 'log_count/DEBUG': 218,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 93798400,
+ 'memusage/startup': 93798400,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2018, 3, 4, 20, 0, 3, 460719)}
+2018-03-04 20:00:14 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o42
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o44
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o45
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o38
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o49
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o50
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o51
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o62
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o63
+e
+
+2018-03-04 20:00:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: shudamazon)
+2018-03-04 20:01:41 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.3 | packaged by conda-forge | (default, Oct  5 2017, 14:07:33) - [GCC 4.8.2 20140120 (Red Hat 4.8.2-15)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Linux-4.4.0-116-generic-x86_64-with-debian-stretch-sid
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o0
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o6
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o7
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o8
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o9
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o10
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o11
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o13
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o16
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o17
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o18
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o19
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o22
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o25
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o26
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o27
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o28
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o31
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o32
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o33
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o34
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'shudamazon', 'CLOSESPIDER_PAGECOUNT': '1', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'CONCURRENT_REQUESTS_PER_IP': 1, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 10, 'FEED_FORMAT': 'jl', 'FEED_URI': 'shuddata.jl', 'LOG_FILE': 'shud_20180304.log', 'NEWSPIDER_MODULE': 'shudamazon.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['shudamazon.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+2018-03-04 20:01:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-04 20:01:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-04 20:01:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-04 20:01:41 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-03-04 20:01:41 [scrapy.core.engine] INFO: Spider opened
+2018-03-04 20:01:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-04 20:01:41 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+sc
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yro37
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: c
+o37
+defaultParallelism
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !yi2
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+e
+
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:41 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+ro12
+s/tmp/spark-f784de1c-e1ab-4412-bb6f-eb0cc5594914/pyspark-c63448e7-a15a-4109-835b-2508c9c7665e/tmpz01h3fn0
+i2
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro38
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+id
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yi0
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+toJavaArray
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+pythonToJava
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonFunction
+rj
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonFunction
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.HashMap
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yao39
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o39
+put
+sPYTHONHASHSEED
+s0
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yn
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ylo40
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ylo41
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonFunction
+jgAIoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2ZpbGxfZnVuY3Rpb24KcQAoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX21ha2Vfc2tlbF9mdW5jCnEBY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2J1aWx0aW5fdHlwZQpxAlgIAAAAQ29kZVR5cGVxA4VxBFJxBShLAksASwJLA0sTY19jb2RlY3MKZW5jb2RlCnEGWAwAAAB0AMKIAHwBwoMCUwBxB1gGAAAAbGF0aW4xcQiGcQlScQpOhXELWAMAAABtYXBxDIVxDVgBAAAAX3EOWAgAAABpdGVyYXRvcnEPhnEQWCYAAAAvdXNyL2xvY2FsL3NwYXJrL3B5dGhvbi9weXNwYXJrL3JkZC5weXERWAQAAABmdW5jcRJNPQFoBlgCAAAAAAFxE2gIhnEUUnEVWAEAAABmcRaFcRcpdHEYUnEZXXEaaAAoaAFoBShLAUsASwFLAUtTaAZYBAAAAHwAUwBxG2gIhnEcUnEdToVxHilYAQAAAHhxH4VxIGgRWAgAAAA8bGFtYmRhPnEhTUwCY19fYnVpbHRpbl9fCmJ5dGVzCnEiKVJxIykpdHEkUnElXXEmfXEnh3EoUnEpfXEqTn1xK1gLAAAAcHlzcGFyay5yZGRxLHRSYWgnh3EtUnEufXEvTn1xMGgsdFJOY3B5c3Bhcmsuc2VyaWFsaXplcnMKQmF0Y2hlZFNlcmlhbGl6ZXIKcTEpgXEyfXEzKFgKAAAAc2VyaWFsaXplcnE0Y3B5c3Bhcmsuc2VyaWFsaXplcnMKUGlja2xlU2VyaWFsaXplcgpxNSmBcTZ9cTdYEwAAAF9vbmx5X3dyaXRlX3N0cmluZ3NxOIlzYlgJAAAAYmF0Y2hTaXplcTlLAXViY3B5c3Bhcmsuc2VyaWFsaXplcnMKQXV0b0JhdGNoZWRTZXJpYWxpemVyCnE6KYFxO31xPChoNGg1KYFxPX1xPmg4iXNiaDlLAFgIAAAAYmVzdFNpemVxP0oAAAEAdWJ0cUAu
+ro39
+ro40
+spython
+s3.6
+ro41
+ro15
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro42
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o39
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o40
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o41
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+rdd
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro43
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonRDD
+ro43
+ro42
+bTrue
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro44
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o44
+asJavaRDD
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro45
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o37
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o43
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+pythonToJava
+ro45
+bTrue
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro46
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+toJavaArray
+ro46
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro47
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o47
+rdd
+e
+
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Answer received: !yro48
+2018-03-04 20:01:42 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+applySchemaToPythonRDD
+ro48
+s{"fields":[{"metadata":{},"name":"url","nullable":true,"type":"string"},{"metadata":{},"name":"crawled","nullable":true,"type":"string"}],"type":"struct"}
+e
+
+2018-03-04 20:01:45 [py4j.java_gateway] DEBUG: Answer received: !yro49
+2018-03-04 20:01:45 [py4j.java_gateway] DEBUG: Command to send: c
+o49
+createOrReplaceTempView
+sWorkTable
+e
+
+2018-03-04 20:01:45 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:45 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:01:46 [py4j.java_gateway] DEBUG: Answer received: !yro50
+2018-03-04 20:01:46 [py4j.java_gateway] DEBUG: Command to send: c
+o50
+javaToPython
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !yro51
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+id
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !yi8
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Answer received: !yro52
+2018-03-04 20:01:47 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro52
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !yi40411
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Answer received: !yro53
+2018-03-04 20:01:49 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro53
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi35934
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o46
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o47
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o48
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o52
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o53
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro54
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o54
+javaToPython
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro55
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+id
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi12
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro56
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro56
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi42651
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro57
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro57
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi36429
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.amazon.com/gp/goldbox> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro58
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o58
+javaToPython
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro59
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+id
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi16
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro60
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro60
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yi40549
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Answer received: !yro61
+2018-03-04 20:01:50 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro61
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yi45632
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yro62
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o62
+javaToPython
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yro63
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+id
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yi20
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yro64
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro64
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yi43589
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yro65
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro65
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yi45379
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o54
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o55
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o56
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o57
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o58
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o59
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o60
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o61
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o64
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o65
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yro66
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o66
+e
+
+2018-03-04 20:01:51 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/robots.txt> (referer: None)
+2018-03-04 20:01:51 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2018-03-04 20:01:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/gp/goldbox> (referer: None)
+2018-03-04 20:01:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.com/gp/goldbox> (referer: None)
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py", line 101, in parse
+    print("%%%%%%% Current url = %s " %response.url)
+ValueError: unsupported format character 'C' (0x43) at index 8
+2018-03-04 20:01:52 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 618,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 117776,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'dupefilter/filtered': 3,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2018, 3, 4, 20, 1, 52, 753277),
+ 'log_count/DEBUG': 218,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 93913088,
+ 'memusage/startup': 93913088,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2018, 3, 4, 20, 1, 41, 814450)}
+2018-03-04 20:01:52 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o42
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o44
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o45
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o38
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o49
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o50
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o51
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o62
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o63
+e
+
+2018-03-04 20:01:52 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: shudamazon)
+2018-03-04 20:03:06 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.3 | packaged by conda-forge | (default, Oct  5 2017, 14:07:33) - [GCC 4.8.2 20140120 (Red Hat 4.8.2-15)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Linux-4.4.0-116-generic-x86_64-with-debian-stretch-sid
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o0
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o6
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o7
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o8
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o9
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o10
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o11
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o13
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o16
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o17
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o18
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o19
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o22
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o25
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o26
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o27
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o28
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o31
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o32
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o33
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o34
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:06 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'shudamazon', 'CLOSESPIDER_PAGECOUNT': '1', 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'CONCURRENT_REQUESTS_PER_IP': 1, 'COOKIES_ENABLED': False, 'DOWNLOAD_DELAY': 10, 'FEED_FORMAT': 'jl', 'FEED_URI': 'shuddata.jl', 'LOG_FILE': 'shud_20180304.log', 'NEWSPIDER_MODULE': 'shudamazon.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['shudamazon.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+2018-03-04 20:03:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-04 20:03:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-04 20:03:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-04 20:03:06 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-03-04 20:03:06 [scrapy.core.engine] INFO: Spider opened
+2018-03-04 20:03:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-04 20:03:06 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+sc
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yro37
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: c
+o37
+defaultParallelism
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !yi2
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+e
+
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:06 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+readRDDFromFile
+ro12
+s/tmp/spark-16daa725-efd4-4575-a797-9f4434fd2d2b/pyspark-9b47495b-9956-47c3-ba2a-0dfccc2e39c8/tmp8wz5ixry
+i2
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro38
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+id
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yi0
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+toJavaArray
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+u
+SerDeUtil
+rj
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.SerDeUtil
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.SerDeUtil
+pythonToJava
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonFunction
+rj
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonFunction
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.HashMap
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yao39
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o39
+put
+sPYTHONHASHSEED
+s0
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yn
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ylo40
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: i
+java.util.ArrayList
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ylo41
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonFunction
+jgAIoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2ZpbGxfZnVuY3Rpb24KcQAoY3B5c3BhcmsuY2xvdWRwaWNrbGUKX21ha2Vfc2tlbF9mdW5jCnEBY3B5c3BhcmsuY2xvdWRwaWNrbGUKX2J1aWx0aW5fdHlwZQpxAlgIAAAAQ29kZVR5cGVxA4VxBFJxBShLAksASwJLA0sTY19jb2RlY3MKZW5jb2RlCnEGWAwAAAB0AMKIAHwBwoMCUwBxB1gGAAAAbGF0aW4xcQiGcQlScQpOhXELWAMAAABtYXBxDIVxDVgBAAAAX3EOWAgAAABpdGVyYXRvcnEPhnEQWCYAAAAvdXNyL2xvY2FsL3NwYXJrL3B5dGhvbi9weXNwYXJrL3JkZC5weXERWAQAAABmdW5jcRJNPQFoBlgCAAAAAAFxE2gIhnEUUnEVWAEAAABmcRaFcRcpdHEYUnEZXXEaaAAoaAFoBShLAUsASwFLAUtTaAZYBAAAAHwAUwBxG2gIhnEcUnEdToVxHilYAQAAAHhxH4VxIGgRWAgAAAA8bGFtYmRhPnEhTUwCY19fYnVpbHRpbl9fCmJ5dGVzCnEiKVJxIykpdHEkUnElXXEmfXEnh3EoUnEpfXEqTn1xK1gLAAAAcHlzcGFyay5yZGRxLHRSYWgnh3EtUnEufXEvTn1xMGgsdFJOY3B5c3Bhcmsuc2VyaWFsaXplcnMKQmF0Y2hlZFNlcmlhbGl6ZXIKcTEpgXEyfXEzKFgKAAAAc2VyaWFsaXplcnE0Y3B5c3Bhcmsuc2VyaWFsaXplcnMKUGlja2xlU2VyaWFsaXplcgpxNSmBcTZ9cTdYEwAAAF9vbmx5X3dyaXRlX3N0cmluZ3NxOIlzYlgJAAAAYmF0Y2hTaXplcTlLAXViY3B5c3Bhcmsuc2VyaWFsaXplcnMKQXV0b0JhdGNoZWRTZXJpYWxpemVyCnE6KYFxO31xPChoNGg1KYFxPX1xPmg4iXNiaDlLAFgIAAAAYmVzdFNpemVxP0oAAAEAdWJ0cUAu
+ro39
+ro40
+spython
+s3.6
+ro41
+ro15
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro42
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o39
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o40
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o41
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o38
+rdd
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro43
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: i
+org.apache.spark.api.python.PythonRDD
+ro43
+ro42
+bTrue
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro44
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o44
+asJavaRDD
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro45
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o37
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o43
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+pythonToJava
+ro45
+bTrue
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro46
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.SerDeUtil
+toJavaArray
+ro46
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro47
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o47
+rdd
+e
+
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Answer received: !yro48
+2018-03-04 20:03:07 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+applySchemaToPythonRDD
+ro48
+s{"fields":[{"metadata":{},"name":"url","nullable":true,"type":"string"},{"metadata":{},"name":"crawled","nullable":true,"type":"string"}],"type":"struct"}
+e
+
+2018-03-04 20:03:10 [py4j.java_gateway] DEBUG: Answer received: !yro49
+2018-03-04 20:03:10 [py4j.java_gateway] DEBUG: Command to send: c
+o49
+createOrReplaceTempView
+sWorkTable
+e
+
+2018-03-04 20:03:12 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:12 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:03:12 [py4j.java_gateway] DEBUG: Answer received: !yro50
+2018-03-04 20:03:12 [py4j.java_gateway] DEBUG: Command to send: c
+o50
+javaToPython
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !yro51
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+id
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !yi8
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Answer received: !yro52
+2018-03-04 20:03:14 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro52
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !yi33463
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: c
+o51
+rdd
+e
+
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Answer received: !yro53
+2018-03-04 20:03:16 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro53
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yi44399
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o46
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o47
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o48
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o52
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o53
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro54
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o54
+javaToPython
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro55
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+id
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yi12
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro56
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro56
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yi36714
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o55
+rdd
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro57
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro57
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yi35635
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:17 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.amazon.com/gp/goldbox> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro58
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o58
+javaToPython
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yro59
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+id
+e
+
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Answer received: !yi16
+2018-03-04 20:03:17 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro60
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro60
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yi44246
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o59
+rdd
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro61
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro61
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yi34413
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro62
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o62
+javaToPython
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro63
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+id
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yi20
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:80
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro64
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro64
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yi36359
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+scollect at /home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py:83
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+u
+PythonRDD
+rj
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ycorg.apache.spark.api.python.PythonRDD
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: r
+m
+org.apache.spark.api.python.PythonRDD
+collectAndServe
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !ym
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o63
+rdd
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yro65
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+z:org.apache.spark.api.python.PythonRDD
+collectAndServe
+ro65
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yi39472
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: c
+o12
+setCallSite
+n
+e
+
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:18 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o54
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o55
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o56
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o57
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o58
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o59
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o60
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o61
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o64
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o65
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: c
+o23
+sql
+sSELECT url from WorkTable where crawled = 'false'
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yro66
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o66
+e
+
+2018-03-04 20:03:19 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/robots.txt> (referer: None)
+2018-03-04 20:03:19 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2018-03-04 20:03:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/gp/goldbox> (referer: None)
+2018-03-04 20:03:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.com/gp/goldbox> (referer: None)
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/jovyan/work/shud/shudamazon/spiders/shudamazon_spider.py", line 101, in parse
+    print("%%%%%%% Current url = %s " %response.url)
+ValueError: unsupported format character 'C' (0x43) at index 8
+2018-03-04 20:03:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 618,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 117944,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'dupefilter/filtered': 3,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2018, 3, 4, 20, 3, 20, 488627),
+ 'log_count/DEBUG': 218,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 93929472,
+ 'memusage/startup': 93929472,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2018, 3, 4, 20, 3, 6, 586122)}
+2018-03-04 20:03:20 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o42
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o44
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o45
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o38
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o49
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o50
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o51
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o62
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Command to send: m
+d
+o63
+e
+
+2018-03-04 20:03:20 [py4j.java_gateway] DEBUG: Answer received: !yv
