@@ -69,20 +69,10 @@ class ShudCrawler(scrapy.Spider):
         initUrlList = [(self.config.get('crawling', 'startUrl'), "false")]
         df = self.sparkSession.createDataFrame(initUrlList, schema=["url", "crawled"])
         self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
-        
-<<<<<<< HEAD
-        
-        urls = [self.start_urls]
+        urls = [start_urls]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
         
-=======
-        '''
-        urls = [self.start_urls]
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
-        '''
->>>>>>> 4259ceaaffaa1421ea21025b79c68b5439ba7165
         indx = 0
         urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
         while len(urlListe.rdd.collect()) > 0:
