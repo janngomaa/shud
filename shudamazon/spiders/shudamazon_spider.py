@@ -69,9 +69,8 @@ class ShudCrawler(scrapy.Spider):
         initUrlList = [(self.config.get('crawling', 'startUrl'), "false")]
         df = self.sparkSession.createDataFrame(initUrlList, schema=["url", "crawled"])
         self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
-        urls = [start_urls]
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+        
+
         
         indx = 0
         urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
@@ -84,7 +83,8 @@ class ShudCrawler(scrapy.Spider):
                 #Vérifier que l'url contient au moins un des allowed domain
                 if self.config.get('crawling', 'allowedDomain') in url[0]:
                     print("&&&&&&&&&&&&&&&&&&&&&& Allowed url = %s " %str(url[0]))
-                    yield scrapy.Request(url=url[0], callback=self.parse)
+                    a=url[0]
+                    yield scrapy.Request(url=a, callback=self.parse)
 
             urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
             if indx > 2:
@@ -96,7 +96,7 @@ class ShudCrawler(scrapy.Spider):
 
     def parse(self, response):
         
-        print("%%%%%%% Current url = %s " %response.url)
+        #print("%%%%%%% Current url = %s " %response.url)
         print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
         newUrls = []
