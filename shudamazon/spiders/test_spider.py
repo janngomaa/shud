@@ -25,8 +25,7 @@ class MySpider(BaseSpider):
 
 		visited_links=[]
 		links = hxs.xpath('//a/@href').extract()
-                link_validator= re.compile("^(?:http|https):\/\/(?:[\w\.\-\+]+:{0,1}[\w\.\-\+]*@)?(?:[a-z0-9\-\.]+)(?::[0-9]+)?(?:\/|\/(?:[\w#!:\.\?\+=&amp;%@!\-\/\(\)]+)|\?(?:[\w#!:\.\?\+=&amp;%@!\-\/\(\)]+))?$")
-
+                link_validator = re.compile("^(?:http|https):(.)*[ref=gbps_tit_s](.)*")
 
 		
 		for link in links:
