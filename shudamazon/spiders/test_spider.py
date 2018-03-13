@@ -7,8 +7,8 @@ import re
 
 class MySpider(BaseSpider):
 	name = "basic_crawler"
-	allowed_domains = ['packtpub.com']
-	start_urls = ["https://www.packtpub.com"]
+	allowed_domains = ['amazon.ca']
+	start_urls = ["https://www.amazon.ca/gp/goldbox"]
 
 	def parse(self, response):
 		hxs = Selector(response)
@@ -16,7 +16,7 @@ class MySpider(BaseSpider):
 		print("Crawling " + str(response.url))
 
 		#CODE for scraping book titles
-		book_titles = hxs.xpath('//div[@class="book-block-title"]/text()').extract()
+		book_titles = hxs.xpath('//*[@id="dealTitle"]/span/text()').extract()
 	 	for title in book_titles:
 			book = BasicCrawlerItem()
 			book["title"] = title
