@@ -1,6 +1,6 @@
 from scrapy.spiders import BaseSpider
 from scrapy.selector import Selector
-from basic_crawler.items import BasicCrawlerItem
+from shudamazon.items import BasicCrawlerItem
 from scrapy.http import Request
 import re
 
@@ -12,6 +12,8 @@ class MySpider(BaseSpider):
 
 	def parse(self, response):
 		hxs = Selector(response)
+		
+		print("Crawling " + str(response.url))
 
 		#CODE for scraping book titles
 		book_titles = hxs.xpath('//div[@class="book-block-title"]/text()').extract()
