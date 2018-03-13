@@ -8,7 +8,8 @@
 import scrapy
 
 
-class ShudamazonItem(scrapy.Item):
+class BasicCrawlerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+
