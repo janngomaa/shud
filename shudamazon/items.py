@@ -12,3 +12,11 @@ class ShudamazonItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+class ShudCrawlerItem(scrapy.Item):
+    id = scrapy.Field()
+    name = scrapy.Field()
+    crawled = scrapy.Field()
+    parsed = scrapy.Field()
+    url = scrapy.Field()
+    referer = scrapy.Field()

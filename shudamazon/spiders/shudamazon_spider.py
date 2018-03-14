@@ -4,9 +4,11 @@ import pyspark
 from pyspark.conf import SparkConf
 from pyspark.sql import SparkSession
 from pyspark.sql import SQLContext
+'''
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import re
+'''
 import hashlib
 import inspect
 from scrapy.http import HtmlResponse
@@ -30,6 +32,14 @@ from scrapy.crawler import Crawler
 from scrapy.settings import Settings
 import pandas as pd
 
+
+class ShudScraperItem(scrapy.Item):
+    # The source URL
+    url_from = scrapy.Field()
+    # The destination URL
+   # url_to = scrapy.Field()
+
+    
 class ShudCrawler(scrapy.Spider):
     name = "amazon"
     config = configparser.ConfigParser()
@@ -74,33 +84,43 @@ class ShudCrawler(scrapy.Spider):
         
         indx = 0
         urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
+        
         while len(urlListe.rdd.collect()) > 0:
             print("####################### Current step = %s " %str(indx))
             
             for url in urlListe.rdd.collect():
-                print("************************** Current url = %s " %str(url))
+                print("************************** Current url = %s " %str(url))                
                 #TODO
-                #Vérifier que l'url contient au moins un des allowed domain
-                if self.config.get('crawling', 'allowedDomain') in url[0]:
-                    print("&&&&&&&&&&&&&&&&&&&&&& Allowed url = %s " %str(url[0]))
-                    a=url[0]
-                    yield scrapy.Request(url=a, callback=self.parse)
-
-            urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")
-            if indx > 2:
+                #Vérifier que l'url contient au moins un des allowed domain                
+               # if self.config.get('crawling', 'allowedDomain') in url[0]:
+                    
+                a=url[0]
+                try:
+                    self.parse2(self, a, indx)
+                except:
+                    pass
+                #yield scrapy.Request(url=str(a), callback=self.parse)
+                    
+            print("************************** Current url = %s " %str(url))
+            urlListe = self.sqlContext.sql("SELECT url from WorkTable where crawled = 'false'")                    
+            
+            print("************************** DEBUTs WorkTable " )
+            Myliste = self.sqlContext.sql("SELECT * from WorkTable")
+            print(Myliste.show()) 
+            print("************************** FIN WorkTable")
+            
+            if indx > 4:
                 break
                 
             indx += 1
             
             
 
-    def parse(self, response):
-        
-        #print("%%%%%%% Current url = %s " %response.url)
-        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    def parse(self, response):        
+        print("%%%%%%% Current url = %s " %response.url)
 
         newUrls = []
-
+        items = []
         # Only extract canonicalized and unique links (with respect to the current page)
         links = LinkExtractor(canonicalize=False, unique=True).extract_links(response)
         # Now go through all the found links
@@ -120,9 +140,10 @@ class ShudCrawler(scrapy.Spider):
                 .union(self.sparkSession.createDataFrame([(response.url, "true")]))\
                 .dropDuplicates(['url'])
         
+        self.sqlContext.dropTempTable("WorkTable")
         self.sqlContext.registerDataFrameAsTable(df, "WorkTable")
-        print(df.show())
         
+        #print(df.show())
         # TODO
         #Put response body's content into RDDs
         #page = response.url.split("/")[-2]
@@ -131,6 +152,9 @@ class ShudCrawler(scrapy.Spider):
         filename = str(self.name)+'_'+ m.hexdigest() + '.html'
         with open(filename, 'wb') as f:
             f.write(response.body)
-        self.log('Saved file %s' % filename) 
-        
-        return df
+        self.log('Saved file %s' % filename)
+        item = ShudScraperItem()
+        item['url_from'] = response.url
+        items.append(item)
+        yield item
+   
