@@ -25,6 +25,7 @@ class GrouponCrawlerSpider(CrawlSpider):
             follow=True
         ),
     )
+    
 
     def parse_item(self, response):
         page = ShudCrawlerItem()

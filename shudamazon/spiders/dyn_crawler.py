@@ -4,6 +4,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from shudamazon.items import ShudCrawlerItem
 import hashlib
+from urllib.parse import urlparse
 
 
 class DynCrawlerSpider(CrawlSpider):
@@ -30,8 +31,8 @@ class DynCrawlerSpider(CrawlSpider):
     def parse_item(self, response):
         
         page = ShudCrawlerItem()
-        filename = str(self.name)+'_'+ str(response.url).replace('/', '_')[0:32] +'.html' 
         fileid = hashlib.md5(bytes(str(response.url),"ascii")).hexdigest()
+        filename = str(urlparse(response.url).netloc) +"__"+ fileid
         
         #if response.xpath('//*[@id="priceblock_dealprice_lbl"]'):
         #    with open(fileid, 'wb') as f:
