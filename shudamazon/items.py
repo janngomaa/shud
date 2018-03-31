@@ -20,3 +20,19 @@ class ShudCrawlerItem(scrapy.Item):
     parsed = scrapy.Field()
     url = scrapy.Field()
     referer = scrapy.Field()
+    
+    
+    
+    
+class GrouponDealItem(scrapy.Item):
+    id = scrapy.Field()
+    title = scrapy.Field()
+    url = scrapy.Field()
+    header = scrapy.Field()    
+    merchant = scrapy.Field()
+    merchantLocation = scrapy.Field()
+    dealOptTitles = scrapy.Field()
+    dealOptMessages = scrapy.Field()
+    dealOptInitPrices = scrapy.Field()
+    dealOptFinalPrices = scrapy.Field()
+

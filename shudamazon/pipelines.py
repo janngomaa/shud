@@ -5,7 +5,28 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
+from scrapy.exceptions import DropItem
 
 class ShudamazonPipeline(object):
     def process_item(self, item, spider):
         return item
+    
+    
+
+
+class GrouponDealItemPipeline(object):
+
+    def process_item(self, item, spider):
+        if not item['title'] is None:
+            if item['price_excludes_vat']:
+                item['title'] = item['title']
+            return item
+        else:
+            raise DropItem("Missing title in %s" % item)
+            
+            
+    def open_spider(self, spider):
+        self.file = open('items.jl', 'w')
+
+    def close_spider(self, spider):
+        self.file.close()
