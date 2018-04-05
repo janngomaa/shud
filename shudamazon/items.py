@@ -24,11 +24,13 @@ class ShudCrawlerItem(scrapy.Item):
     
     
     
-class GrouponDealItem(scrapy.Item):
-    id = scrapy.Field()
-    title = scrapy.Field()
+class GrpDealItem(scrapy.Item):
+    id = scrapy.Field()    
     url = scrapy.Field()
-    header = scrapy.Field()    
+    referer = scrapy.Field()
+    domain = scrapy.Field()
+    title = scrapy.Field()
+    
     merchant = scrapy.Field()
     merchantLocation = scrapy.Field()
     dealOptTitles = scrapy.Field()

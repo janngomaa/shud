@@ -6,27 +6,28 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 from scrapy.exceptions import DropItem
+import json
+import configparser
+import datetime
 
-class ShudamazonPipeline(object):
-    def process_item(self, item, spider):
-        return item
+class GrpDealItemPipeline(object):
+    config = configparser.ConfigParser()
+    config.read('../shud.ini')
+    startTime =datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f_%z")
+    batch_id = "grp_" + startTime
+    fileName = config.get('layers', 'staging_repo') + batch_id + '.jl'
     
-    
-
-
-class GrouponDealItemPipeline(object):
-
-    def process_item(self, item, spider):
-        if not item['title'] is None:
-            if item['price_excludes_vat']:
-                item['title'] = item['title']
-            return item
-        else:
-            raise DropItem("Missing title in %s" % item)
-            
-            
     def open_spider(self, spider):
-        self.file = open('items.jl', 'w')
+        self.file = open(self.fileName, 'w')
 
     def close_spider(self, spider):
         self.file.close()
+        #Insert into param table
+        
+    def process_item(self, item, spider):
+        if not item['title'] is None:
+            line = json.dumps(dict(item)) + "\n"
+            self.file.write(line)
+            return item
+        else:
+            raise DropItem("Missing title in %s" % item)

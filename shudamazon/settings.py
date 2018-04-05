@@ -65,9 +65,9 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'shudamazon.pipelines.ShudamazonPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'shudamazon.pipelines.GrpDealItemPipeline': 1,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

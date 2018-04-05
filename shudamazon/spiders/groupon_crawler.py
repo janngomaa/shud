@@ -2,13 +2,13 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from shudamazon.items import ShudCrawlerItem, GrouponDealItem
+from shudamazon.items import ShudCrawlerItem, GrpDealItem
 import hashlib
 from urllib.parse import urlparse
 
 
 
-class GrouponCrawlerSpider(CrawlSpider):
+class GrpCrawlerSpider(CrawlSpider):
     name = 'groupon_crawler'
     allowed_domains = ['groupon.com']
     start_urls = ['http://groupon.com/']
@@ -29,21 +29,14 @@ class GrouponCrawlerSpider(CrawlSpider):
 
     def parse_item(self, response):
         page = ShudCrawlerItem()
-        deal = GrouponDealItem()
-        fileid = hashlib.md5(bytes(str(response.url),"ascii")).hexdigest()
-        filename = str(urlparse(response.url).netloc) +"__"+ fileid
-        #with open(filename, 'wb') as f:
-        #    f.write(response.body)
-                
-        page['name']=filename
-        page['crawled']=True
-        page['parsed']=False
-        page['url']=response.url
-        page['id']= fileid 
-        page['referer']= str(response.request.headers.get('Referer', None))
+        deal = GrpDealItem()
         
-        deal['header'] = page
+        deal['id'] = hashlib.md5(bytes(str(response.url),"ascii")).hexdigest()
+        deal['url']=response.url
+        deal['referer']= str(response.request.headers.get('Referer', None))
+        deal['domain'] = str(urlparse(response.url).netloc)
         deal['title'] = response.xpath('//*[@id="deal-title"]/text()').extract_first()
+        
         deal['merchant'] = response.xpath('//*[@id="deal-subtitle-container"]/h2/span/span/text()').extract_first()
         deal['merchantLocation'] = response.xpath(\
                                                   '//*[@id="deal-subtitle-container"]/h2/span/div/a/text()'\
