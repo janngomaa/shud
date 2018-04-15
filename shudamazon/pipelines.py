@@ -7,13 +7,13 @@
 
 from scrapy.exceptions import DropItem
 import json
-import configparser
 import datetime
+from shudamazon.helper import ShudHelper
 
 class GrpDealItemPipeline(object):
-    config = configparser.ConfigParser()
-    config.read('../shud.ini')
-    startTime =datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f_%z")
+    helper = ShudHelper()
+    config = helper.getConfig()
+    startTime =datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f")
     batch_id = "grp_" + startTime
     fileName = config.get('layers', 'staging_repo') + batch_id + '.jl'
     
@@ -26,6 +26,20 @@ class GrpDealItemPipeline(object):
         
     def process_item(self, item, spider):
         if not item['title'] is None:
+            item['title'] = self.helper.cleanHtml(item['title'])
+            item['merchant'] = self.helper.cleanHtml(item['merchant'])
+            item['merchantLocation'] = self.helper.cleanHtml(item['merchantLocation'])
+            
+            item['dealOptMessages'] = list(filter(lambda x: len(x)>0, \
+                                                  map(self.helper.cleanHtml, item['dealOptMessages'])))
+            item['dealOptPrices'] = list(filter(lambda x: len(x)>0, \
+                                                    map(self.helper.cleanHtml, item['dealOptPrices'])))
+
+            
+            item['dealTiming'] = self.helper.cleanHtml(item['dealTiming'])
+            item['dealRatingValue'] = self.helper.cleanHtml(item['dealRatingValue']) + '%'
+            
+            
             line = json.dumps(dict(item)) + "\n"
             self.file.write(line)
             return item

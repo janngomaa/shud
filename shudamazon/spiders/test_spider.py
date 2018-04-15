@@ -5,7 +5,7 @@ import re
 
 
 class MySpider(BaseSpider):
-    name = "basic_crawler"
+    name = "test_crawler"
     allowed_domains = ['packtpub.com']
     start_urls = ["https://www.packtpub.com"]
 

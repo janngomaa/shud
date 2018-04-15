@@ -30,11 +30,13 @@ class GrpDealItem(scrapy.Item):
     referer = scrapy.Field()
     domain = scrapy.Field()
     title = scrapy.Field()
-    
     merchant = scrapy.Field()
     merchantLocation = scrapy.Field()
     dealOptTitles = scrapy.Field()
     dealOptMessages = scrapy.Field()
-    dealOptInitPrices = scrapy.Field()
-    dealOptFinalPrices = scrapy.Field()
+    dealOptPrices = scrapy.Field()
+    dealTiming = scrapy.Field()
+    dealRatingCount = scrapy.Field()
+    dealRatingValue = scrapy.Field()
+    dealViews = scrapy.Field()
 
