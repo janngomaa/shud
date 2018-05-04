@@ -39,4 +39,7 @@ class GrpDealItem(scrapy.Item):
     dealRatingCount = scrapy.Field()
     dealRatingValue = scrapy.Field()
     dealViews = scrapy.Field()
+    
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
 

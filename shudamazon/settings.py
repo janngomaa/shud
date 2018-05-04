@@ -67,7 +67,10 @@ COOKIES_ENABLED = False
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'shudamazon.pipelines.GrpDealItemPipeline': 1,
+    'scrapy.pipelines.images.ImagesPipeline': 1,
 }
+
+IMAGES_STORE = '.'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

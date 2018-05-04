@@ -73,6 +73,7 @@ class GrpCrawlerSpider(CrawlSpider):
         deal['dealRatingCount'] = response.xpath('//*[@itemprop="ratingCount"]/@content').extract_first()
         deal['dealRatingValue'] = response.xpath('//*[@itemprop="ratingValue"]/@content').extract_first()
         deal['dealViews'] = response.xpath('//*[@id="purchase-cluster"]/div/div[1]/div/div[2]/div[2]/text()').extract_first()
+        deal['image_urls'] = response.xpath('//*[@id="overflow-container"]/div/img/@src').extract()
         
         
         
