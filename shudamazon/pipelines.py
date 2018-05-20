@@ -9,13 +9,14 @@ from scrapy.exceptions import DropItem
 import json
 import datetime
 from shudamazon.helper import ShudHelper
+from importlib.machinery import SourceFileLoader
 
 class GrpDealItemPipeline(object):
-    helper = ShudHelper()
-    config = helper.getConfig()
+    helper = SourceFileLoader("ShudHelper", "/home/jovyan/work/shud/helper/helper.py").load_module()
+    config = helper.ShudHelper.getConfig()
     startTime =datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f")
     batch_id = "grp_" + startTime
-    fileName = config.get('layers', 'staging_repo') + batch_id + '.jl'
+    fileName = config.get('directory', 'datadirectory') + batch_id + '.jl'
     
     def open_spider(self, spider):
         self.file = open(self.fileName, 'w')
@@ -26,18 +27,18 @@ class GrpDealItemPipeline(object):
         
     def process_item(self, item, spider):
         if not item['title'] is None:
-            item['title'] = self.helper.cleanHtml(item['title'])
-            item['merchant'] = self.helper.cleanHtml(item['merchant'])
-            item['merchantLocation'] = self.helper.cleanHtml(item['merchantLocation'])
+            item['title'] = self.helper.ShudHelper.cleanHtml(item['title'])
+            item['merchant'] = self.helper.ShudHelper.cleanHtml(item['merchant'])
+            item['merchantLocation'] = self.helper.ShudHelper.cleanHtml(item['merchantLocation'])
             
             item['dealOptMessages'] = list(filter(lambda x: len(x)>0, \
-                                                  map(self.helper.cleanHtml, item['dealOptMessages'])))
+                                                  map(self.helper.ShudHelper.cleanHtml, item['dealOptMessages'])))
             item['dealOptPrices'] = list(filter(lambda x: len(x)>0, \
-                                                    map(self.helper.cleanHtml, item['dealOptPrices'])))
+                                                    map(self.helper.ShudHelper.cleanHtml, item['dealOptPrices'])))
 
             
-            item['dealTiming'] = self.helper.cleanHtml(item['dealTiming'])
-            item['dealRatingValue'] = self.helper.cleanHtml(item['dealRatingValue']) + '%'
+            item['dealTiming'] = self.helper.ShudHelper.cleanHtml(item['dealTiming'])
+            item['dealRatingValue'] = self.helper.ShudHelper.cleanHtml(item['dealRatingValue']) + '%'
             
             
             line = json.dumps(dict(item)) + "\n"

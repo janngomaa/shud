@@ -16,5 +16,10 @@ class ShudHelper():
     def cleanHtml(self, html):
         return str(html).replace('\n', '').strip()
     
+    def getJsonFiles(self, datadirectory):
+        #list of json-line files
+        json_files = [pos_json for pos_json in os.listdir(datadirectory) if pos_json.endswith('.jl')]
+        return json_files
+    
         
 

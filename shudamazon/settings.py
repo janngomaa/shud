@@ -70,7 +70,7 @@ ITEM_PIPELINES = {
     'scrapy.pipelines.images.ImagesPipeline': 1,
 }
 
-IMAGES_STORE = '.'
+IMAGES_STORE = '/home/jovyan/work/shudStaging/images/'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

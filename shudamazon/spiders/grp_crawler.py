@@ -8,13 +8,14 @@ from shudamazon.helper import ShudHelper
 
 import hashlib
 from urllib.parse import urlparse
-
+from importlib.machinery import SourceFileLoader
 
 
 
 class GrpCrawlerSpider(CrawlSpider):
     name = 'grp_crawler'
-    config = ShudHelper().getConfig()
+    helper = SourceFileLoader("ShudHelper", "/home/jovyan/work/shud/helper/helper.py").load_module()
+    config = helper.ShudHelper.getConfig() 
     allowed_domains = [config.get('crawling', 'grp_domain')]
     start_urls = [config.get('crawling', 'grp_str_url')] 
 
